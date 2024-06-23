@@ -18,6 +18,7 @@ func TestNextToken(t *testing.T) {
     5 < 10 > 5;
 
     als anders waar onwaar;
+    !=;
 
     10 == 10;
     10 != 5;
@@ -34,13 +35,11 @@ func TestNextToken(t *testing.T) {
         {token.ASSIGN, "="},
         {token.INT, "5"},
         {token.SEMICOLON, ";"},
-
         {token.LET, "maak"},
         {token.IDENT, "tien"},
         {token.ASSIGN, "="},
         {token.INT, "10"},
         {token.SEMICOLON, ";"},
-
         {token.LET, "maak"},
         {token.IDENT, "telop"},
         {token.ASSIGN, "="},
@@ -58,7 +57,6 @@ func TestNextToken(t *testing.T) {
         {token.SEMICOLON, ";"},
         {token.RBRACE, "}"},
         {token.SEMICOLON, ";"},
-
         {token.LET, "maak"},
         {token.IDENT, "resultaat"},
         {token.ASSIGN, "="},
@@ -69,43 +67,37 @@ func TestNextToken(t *testing.T) {
         {token.IDENT, "tien"},
         {token.RPAREN, ")"},
         {token.SEMICOLON, ";"},
-        
-
         {token.BANG, "!"},
         {token.MINUS, "-"},
         {token.SLASH, "/"},
         {token.ASTERISK, "*"},
         {token.INT, "5"},
         {token.SEMICOLON, ";"},
-
         {token.INT, "5"},
         {token.LT, "<"},
         {token.INT, "10"},
         {token.GT, ">"},
         {token.INT, "5"},
         {token.SEMICOLON, ";"},
-
         {token.IF, "als"},
         {token.ELSE, "anders"},
         {token.TRUE, "waar"},
         {token.FALSE, "onwaar"},
         {token.SEMICOLON, ";"},
-
+        {token.NEQ, "!="},
+        {token.SEMICOLON, ";"},
         {token.INT, "10"},
         {token.EQ, "=="},
         {token.INT, "10"},
         {token.SEMICOLON, ";"},
-
         {token.INT, "10"},
         {token.NEQ, "!="},
         {token.INT, "5"},
         {token.SEMICOLON, ";"},
-
         {token.INT, "10"},
         {token.LTE, "<="},
         {token.INT, "5"},
         {token.SEMICOLON, ";"},
-
         {token.INT, "10"},
         {token.GTE, ">="},
         {token.INT, "5"},
