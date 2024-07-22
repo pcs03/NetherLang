@@ -10,7 +10,7 @@ func TestNextToken(t *testing.T) {
     maak tien = 10;
 
     maak telop = functie(x, y) {
-        retourneer x + y;
+        geef x + y;
     };
 
     maak resultaat = telop(vijf, tien);
@@ -50,7 +50,7 @@ func TestNextToken(t *testing.T) {
         {token.IDENT, "y"},
         {token.RPAREN, ")"},
         {token.LBRACE, "{"},
-        {token.RETURN, "retourneer"},
+        {token.RETURN, "geef"},
         {token.IDENT, "x"},
         {token.PLUS, "+"},
         {token.IDENT, "y"},

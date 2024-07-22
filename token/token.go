@@ -38,7 +38,7 @@ const (
 	RBRACE = "}"
 
 	FUNCTION = "FUNCTIE"
-	RETURN   = "RETOURNEER"
+	RETURN   = "GEEF"
 	LET      = "MAAK"
 	TRUE     = "WAAR"
 	FALSE    = "ONWAAR"
@@ -49,7 +49,7 @@ const (
 var keywords = map[string]TokenType{
 	"functie":    FUNCTION,
 	"maak":       LET,
-	"retourneer": RETURN,
+	"geef": RETURN,
 	"waar":       TRUE,
 	"onwaar":     FALSE,
 	"als":        IF,
@@ -57,9 +57,11 @@ var keywords = map[string]TokenType{
 }
 
 func LookupIdent(ident string) TokenType {
-	if tok, ok := keywords[ident]; ok {
-		return tok
-	}
+    tok, ok := keywords[ident]
 
-	return IDENT
+    if ok {
+        return tok
+    } else {
+        return IDENT
+    }
 }
